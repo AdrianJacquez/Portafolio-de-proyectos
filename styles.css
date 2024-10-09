@@ -1,4 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital@0;1&display=swap");
+
 body {
+  font-family: "Raleway";
   margin: 0;
   background-color: #000;
   background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
@@ -14,14 +17,32 @@ body {
   background: orange;
   position: fixed;
   width: 100%;
-  z-index: 100;
+  z-index: 50;
 }
 .a-nav {
   font-family: "Raleway", sans-serif;
   text-decoration: none;
   color: black;
-  margin: 20px;
-  font-size: 2.2rem;
+  margin: 5px 20px;
+  font-size: 1.5rem;
+  text-shadow: none;
+  transition: 0.4s;
+}
+.a-nav:hover {
+  text-shadow: 2px 2px 8px black;
+}
+
+.spiderSorpresa {
+  position: fixed;
+  width: 2.5rem;
+  height: 2.5rem;
+  z-index: 100;
+  transform: translateY(-100%);
+  transition: 0.4s;
+}
+
+.navbar:hover ~ .spiderSorpresa {
+  transform: translateY(-5%);
 }
 
 #welcome-section {
@@ -36,7 +57,15 @@ body {
 h1 {
   font-size: 6rem;
   margin-bottom: 0;
+  animation: entrada 1.4s ease forwards;
+  transform: translate(-100%);
 }
+@keyframes entrada {
+  to {
+    transform: translate(0);
+  }
+}
+
 h1,
 h2 {
   font-family: "Raleway", sans-serif;
@@ -51,6 +80,13 @@ h2 {
   font-weight: 200;
   font-style: italic;
   color: orange;
+  animation: entrada 1.4s ease forwards;
+  transform: translate(200%);
+}
+@keyframes entrada {
+  to {
+    transform: translate(0);
+  }
 }
 
 #projects {
@@ -87,29 +123,33 @@ h2 {
   align-items: center;
   margin: 20px;
   border-radius: 10px;
+  position: relative;
+  overflow: hidden;
 }
 .img-card {
   width: 400px;
   height: 350px;
+  border-radius: 10px;
 }
 
 .profile-link {
-  background: orange;
+  position: absolute;
+  background: rgba(255, 166, 0, 0.281);
   border-radius: 20px;
+  bottom: 0;
+  transform: translateY(115%);
+  transition: 0.6s, background-color 1s;
   text-decoration: none;
   color: black;
   font-family: "Poppins", sans-serif;
   font-size: 25px;
-  padding: 5px;
+  padding: 5px 10px;
   margin: 5px;
 }
-@media screen and (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-  .navbar {
-    font-size: 2.3rem;
-  }
+
+.card:hover .profile-link {
+  transform: translateY(0);
+  background-color: orange;
 }
 
 #showAll {
@@ -149,4 +189,13 @@ h2 {
 
 #showAll:hover::before {
   width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .navbar {
+    font-size: 2.3rem;
+  }
 }

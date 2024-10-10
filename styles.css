@@ -8,7 +8,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  overflow-y: scroll;
   overflow-x: hidden;
 }
 
@@ -18,7 +17,7 @@ body {
   justify-content: end;
   background: orange;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   z-index: 50;
 }
 .nav__checkbox {

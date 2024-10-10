@@ -13,6 +13,7 @@ body {
 
 .navbar {
   position: relative;
+  overflow: hidden;
   display: flex;
   justify-content: end;
   background: orange;
@@ -28,15 +29,18 @@ body {
 }
 .nav__img {
   display: none;
+  padding-right: 15px;
 }
 .burger {
-  position: absolute;
-  display: none;
-  top: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   transform: translateY(26%) translateX(100%);
   transition: 0.6s;
   background: orange;
-  width: 100%;
+  width: 100vw;
   z-index: 25;
 }
 .a-burger {
@@ -343,10 +347,6 @@ ul {
     display: block;
   }
   .nav__checkbox:checked + .burger {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
     transform: translateY(26%) translateX(0);
   }
   .card {

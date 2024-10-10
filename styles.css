@@ -31,6 +31,7 @@ body {
 }
 .burger {
   position: absolute;
+  display: none;
   top: 0;
   transform: translateY(26%) translateX(100%);
   transition: 0.6s;
@@ -341,13 +342,11 @@ ul {
   .nav__img {
     display: block;
   }
-  .burger {
+  .nav__checkbox:checked + .burger {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-  }
-  .nav__checkbox:checked + .burger {
     transform: translateY(26%) translateX(0);
   }
   .card {

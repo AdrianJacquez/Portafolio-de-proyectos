@@ -9,6 +9,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -358,6 +359,9 @@ ul {
     font-size: 15px;
   }
   .subtitulo .desing {
+    font-size: 1rem;
+  }
+  #showAll {
     font-size: 1rem;
   }
 }

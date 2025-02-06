@@ -6,7 +6,7 @@ document.addEventListener("click", (event) => {
   if (check.onchecked) {
     // Si el clic no fue dentro del menú ni dentro del botón, se cierra el menú
     if (!menu.contains(event.target)) {
-      menu.style.transform = "translateY(26%) translateX(100%)"; // Agrega la clase que esconde el menú
+      menu.style.transform = "translateY(24%) translateX(100%)"; // Agrega la clase que esconde el menú
     }
   }
 });
